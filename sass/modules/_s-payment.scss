@@ -1,0 +1,259 @@
+
+
+
+
+.s-payment {
+
+
+	font-size: 32px;
+	color: #1b1c1d;
+	display: flex;
+	flex-wrap: wrap;
+
+	@include res(xl) {
+		font-size: 28px;
+	}
+
+	@include res(l) {
+		font-size: 24px;
+	}
+
+	@include res(xs) {
+		font-size: 20px;
+	}
+
+
+	.h1 {
+		font-family: "Kelpt A1", Arial, sans-serif;
+		font-size: 138px;
+		font-weight: 900;
+		font-style: normal;
+		color: #164a7f;
+		line-height: 1.2;
+		max-width: 100%;
+		text-align: left;
+		margin: 0 0 9px -7px;
+		letter-spacing: -0.009em;
+		font-size: 7.2vw;
+
+		@include res(xl) {
+			font-size: 8vw;
+		}
+
+		@include res(xll) {
+			//font-size: 10vw;
+		}
+
+		@include res(l) {
+			margin-left: 10px;
+		}
+
+		@include res(m) {
+			font-size: 45px;
+		}
+
+	}
+
+	&__content {
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		padding: 45px 0 31px;
+		max-width: 1700px;
+		margin: 0 auto;
+		width: 100%;
+
+		@include res(xll) {
+			background-position: -208px 50%;
+			background-size: auto 518px;
+		}
+
+		@include res(m) {
+			background-position: -248px 50%;
+		}
+
+		@include res(s) {
+			background-image: none !important;
+			padding: 20px 0 25px;
+		}
+	}
+
+	.container {
+		max-width: 1250px;
+	}
+}
+
+.payment {
+
+	.grid {
+		width: 100%;
+		max-width: 614px;
+		margin: 0 0 0 auto;
+
+		@include res(xll){
+			max-width: 68%;
+		}
+
+		@include res(s){
+			max-width: 100%;
+		}
+
+
+		&-img {
+			display: none;
+
+			@include res(s){
+				display: block;
+			}
+
+			img {
+				max-width: 85%;
+				height: auto;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+		height:  auto;
+	}
+
+
+	&-map {
+		max-width: 1760px;
+		margin: -57px auto 0;
+		position: relative;
+		z-index: 2;
+		padding: 0 30px;
+
+
+
+		&__content {
+			background: #ffffff;
+			padding: 19px;
+			display: flex;
+			width: 100%;
+			border-radius: 30px;
+			box-shadow: 0 10px 25px 0 rgba(211, 190, 168, 0.4);
+
+			@include res(xll){
+				padding: 10px;
+			}
+
+			@include res(m){
+				padding: 8px;
+				border-radius: 15px;
+			}
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+
+			border-radius: 20px;
+
+
+			@include res(m){
+				border-radius: 10px;
+			}
+
+		}
+	}
+
+	&__list {
+		padding: 0 30px 0 0;
+		line-height: 1.1;
+		list-style: none;
+		counter-reset: list;
+		margin: 0 0 -12px;
+
+		> li {
+			padding: 0 0 37px 77px;
+			position: relative;
+			counter-increment: list;
+
+			@include res(xl){
+				padding: 0 0 33px 70px;
+			}
+
+			@include res(xs){
+				padding: 0 0 23px 50px;
+			}
+
+			&:after {
+				content: counter(list);
+				width: 50px;
+				border-radius: 50%;
+				height: 50px;
+				background: #164a7f;
+				position: absolute;
+				left: 13px;
+				top: -6px;
+				color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+				font-family: "Swis721 Blk BT", Arial, sans-serif;
+				font-size: 32px;
+
+
+				@include res(xl){
+					font-size: 28px;
+					width: 45px;
+					height: 45px;
+				}
+
+				@include res(xs){
+					font-size: 15px;
+					width: 27px;
+					height: 27px;
+				}
+
+			}
+
+			> ul {
+				padding: 16px 0 0;
+				margin: 0 0 -37px;
+
+				@include res(xs){
+					margin: 0 0 -25px;
+				}
+
+				> li {
+					margin: 0 0 15px;
+					padding: 0 0 0 60px;
+					position: relative;
+
+					@include res(l){
+						padding: 0 0 0 30px;
+					}
+
+					&:after {
+						content: "-";
+						position: absolute;
+						top: 2px;
+						left: 40px;
+						background: none;
+
+						@include res(l){
+							left: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.row-btn {
+		justify-content: flex-start;
+
+		@include res(xs){
+			justify-content: center;
+		}
+	}
+}

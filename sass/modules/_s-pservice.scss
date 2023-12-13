@@ -1,0 +1,200 @@
+.s-pservice {
+	padding: 35px 0 82px;
+
+	@include res(xll) {
+		padding: 30px 0 65px;
+	}
+
+	@include res(m) {
+
+	}
+
+	@include res(s) {
+
+	}
+
+	@include res(xs) {
+
+	}
+
+	&-content {
+		margin-bottom: 39px;
+	}
+
+	.h1 {
+		font-size: 100px;
+		font-weight: 900;
+		font-style: normal;
+		color: #164a7f;
+		line-height: 0.8;
+		max-width: 100%;
+		margin: 0 0 42px;
+		text-align: center;
+
+		@include res(xll) {
+			font-size: 70px;
+		}
+
+		@include res(xll) {
+			font-size: 60px;
+			margin: 0 0 20px;
+		}
+
+		@include res(xs) {
+			font-size: 52px;
+		}
+
+		@include res(xxs) {
+			font-size: 45px;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto 13px;
+		}
+
+		span {
+			display: block;
+			font-size: 36px;
+			color: #f7f0dc;
+			position: relative;
+			margin-bottom: -18px;
+
+			@include res(xll) {
+				font-size: 32px;
+				margin-bottom: -15px;
+			}
+
+			@include res(xll) {
+				font-size: 28px;
+				margin-bottom: -12px;
+			}
+
+			@include res(xs) {
+				font-size: 24px;
+				margin-bottom: -10px;
+			}
+		}
+	}
+
+	&__text-bottom {
+		overflow: hidden;
+		text-align: center;
+		font-size: 40px;
+		color: #164a7f;
+		font-weight: 900;
+		text-transform: uppercase;
+		line-height: 1.0;
+
+		@include res(m) {
+			font-size: 35px;
+		}
+
+		@include res(xs) {
+			font-size: 32px;
+		}
+
+		a {
+			color: #ec3940;
+			text-transform: none;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.pservice {
+	color: #1b1c1d;
+	line-height: 1.1;
+	font-size: 22px;
+	margin: 0 0 40px;
+
+	@include res(m) {
+		font-size: 20px;
+	}
+
+
+	@include res(xxs) {
+		font-size: 18px;
+	}
+
+	&.row [class*="grid"] {
+		padding-bottom: 30px;
+	}
+
+	&__item {
+
+		padding: 47px 42px 24px 55px;
+		max-width: 100%;
+
+		@include res(xs) {
+			padding: 35px 30px 20px;
+		}
+
+		@include res(s) {
+
+		}
+
+		&:after {
+
+		}
+
+	}
+
+
+	&__title {
+		font-size: 32px;
+		color: #164a7f;
+		font-weight: 900;
+		text-align: center;
+		margin: 0 0 18px;
+		line-height: 0.9;
+
+		@include res(xll) {
+			font-size: 28px;
+		}
+
+		@include res(xxs) {
+			font-size: 26px;
+		}
+
+		span {
+			color: #ec3940;
+			text-transform: uppercase;
+			display: block;
+			margin: 0 0 -9px;
+			position: relative;
+		}
+	}
+
+	&__text {
+
+	}
+
+	&__icons {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		margin: 0 0 22px;
+
+		&--1 {
+			img {
+				transform: rotate(-10deg);
+			}
+		}
+	}
+
+	&__icon {
+		display: block;
+	}
+	&__icon-bottom {
+		margin: 0 auto 15px;
+		display: block;
+	}
+
+
+}
+

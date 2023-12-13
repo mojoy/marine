@@ -1,0 +1,28 @@
+.entry {
+	max-width: 840px;
+    margin: 0 auto;
+}.entry ol {
+    margin-bottom: 40px;
+    padding-left: 60px;
+    position: relative;
+    padding-right: 25px;
+}
+.entry ol li {
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+.entry h3 {
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.entry h4 {
+	font-size:26px;
+	font-weight: 800;
+	color:#184c81;
+}
+.entry a {
+	color:#ec3940;
+}
+.entry a:hover {
+	color:#c72127;
+}

@@ -1,0 +1,148 @@
+
+.s-legal-details {
+	background-color: #164a7f;
+	display: flex;
+	flex-wrap: wrap;
+	background-position: 50% 50%;
+	padding: 64px 0 96px;
+
+	@include res(l){
+		padding: 40px 0 50px;
+	}
+
+	@include res(xs){
+		padding: 30px 0;
+	}
+
+	.h1 {
+		font-family: "Kelpt A1", Arial, sans-serif;
+		font-size: 68px;
+		font-weight: 900;
+		font-style: normal;
+		color: #fdfaf4;
+		line-height: 1.1;
+		max-width: 100%;
+		margin: 0 0 43px;
+		text-align: center;
+		letter-spacing: 0.037em;
+
+		@include res(xl){
+
+		}
+
+		@include res(xll){
+
+		}
+
+		@include res(l){
+			margin: 0 0 25px;
+			font-size: 55px;
+		}
+
+		@include res(xs){
+			font-size: 48px;
+		}
+
+		@include res(xxs){
+			font-size: 44px;
+		}
+
+	}
+}
+
+.legal-details {
+
+	font-size: 18px;
+	color: #1b1c1d;
+	line-height: 1.2;
+
+	p {
+		margin: 0 0 10px;
+	}
+
+	.container {
+		max-width: 1250px;
+	}
+
+	> [class*="grid"] {
+		padding-bottom: 20px;
+	}
+
+	&__item {
+		padding: 52px 35px 20px 35px;
+		max-width: 100%;
+
+		@include res(xll){
+			padding: 40px 30px 20px 30px;
+		}
+
+		&:after {
+
+		}
+	}
+
+	&__title {
+		color: #184c81;
+		font-size: 40px;
+		font-weight: 600;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 0.85;
+		margin: 0 0 19px;
+
+		@include res(xll){
+			font-size: 36px;
+		}
+
+	}
+
+	&__icon {
+		margin: 0 auto 16px;
+		height: auto;
+		display: block;
+
+		@include res(l){
+			max-width: 55px;
+		}
+
+	}
+
+	&__bottomicon {
+		margin: 0 auto;
+		display: block;
+	}
+
+	&__text {
+		padding: 0 7px 11px;
+	}
+
+	ol {
+		li {
+			padding: 0 0 12px;
+		}
+	}
+
+	ul {
+		margin-left: -14px;
+
+		> li {
+			margin: 0 0 17px;
+			padding: 0 0 0 9px;
+
+			&:after {
+				content: "";
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background: #1b1c1d;
+				left: -1px;
+				top: 0.5em;
+			}
+		}
+	}
+}
+
+
+
+
+

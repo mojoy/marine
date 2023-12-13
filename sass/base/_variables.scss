@@ -1,0 +1,37 @@
+$breakpoints: (
+	'xxl': (max-width: 1680px),
+	'xl': (max-width: 1400px),
+	'xll': (max-width: 1280px),
+	'l': (max-width: 1024px),
+	'm': (max-width: 768px),
+	's': (max-width: 680px),
+	'xs': (max-width: 480px),
+	'xxs': (max-width: 375px),
+	'xxxs': (max-width: 350px),
+);
+
+$font: "Kelpt A1", Arial, sans-serif;
+
+$container_width: 1260px;
+
+$gutter: 15px;
+
+$shadow-block: 0 2px 15px 0 transparentize(#a6bfcf,0.5);
+$shadow-block-big: 0 3px 35px 0 transparentize(#a6bfcf,0.3);
+
+
+$green-light: #d5f4f4;
+$white: #f4f5f6;
+$black: #000000;
+$bg-color: #0f4378;
+$gray-text: #7b90a1;
+$gray-border: #cedae1;
+$gray-bg: #e6eff6;
+$green-bg: #eefafc;
+
+$green: #c82228;
+$green-dark: darken($green, 0.5);
+
+$gold: #e0c787;
+$seafoam: #c82228;
+$black: #000;

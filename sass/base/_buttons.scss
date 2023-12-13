@@ -1,0 +1,294 @@
+.row-btn {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 35px;
+
+	@include res(xs){
+		padding-top: 10px;
+	}
+}
+
+.button {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+	color: #fff;
+	text-transform: uppercase;
+	-webkit-tap-highlight-color: transparent;
+	transition: all 0.3s ease;
+	font-family: "Kelpt A1", Arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 28px;
+	background: #ec3940;
+	background: -moz-linear-gradient(top,  #ec3940 0%, #c72127 100%);
+	background: -webkit-linear-gradient(top,  #ec3940 0%,#c72127 100%);
+	background: linear-gradient(to bottom,  #ec3940 0%,#c72127 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec3940', endColorstr='#c72127',GradientType=0 );
+
+	box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.3);
+	border-radius: 35px;
+	letter-spacing: 0.005em;
+	padding: 16px 48px;
+
+	@include res(l){
+		padding: 13px 40px;
+		font-size: 25px;
+	}
+
+	@include res(xs){
+		font-size: 20px;
+	}
+
+	&:focus {
+
+	}
+
+	&:hover,
+	&:active {
+		color: #fff;
+		background: #c72127;
+		background: -moz-linear-gradient(top,  #c72127 0%, #c72127 100%);
+		background: -webkit-linear-gradient(top,  #c72127 0%,#c72127 100%);
+		background: linear-gradient(to bottom,  #c72127 0%,#c72127 100%);
+		//box-shadow:  0 1px 0 0 #b0244a;
+	}
+
+	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	[class^="icon-"]::before,
+	[class*=" icon-"]::before {
+		font-size: 25px;
+		margin-top: -7px;
+		margin-left: -7px;
+		margin-bottom: -7px;
+		margin-right: 13px;
+
+		@include res(xs){
+			font-size: 22px;
+		}
+	}
+
+	.button__text {
+		&--open {
+			display: none;
+		}
+	}
+
+	&--medium{
+		font-size: 20px;
+		padding: 11px 33px;
+
+
+		@include res(l) {
+			font-size: 19px;
+			padding: 9px 24px;
+		}
+	}
+
+	&--small{
+		font-size: 26px;
+		padding: 1px 12px;
+		border-radius: 5px;
+		text-transform: none;
+		font-weight: 500;
+		font-style: normal;
+		line-height: 1.2;
+
+		@include res(m) {
+			font-size: 20px;
+		}
+	}
+
+	&--outline{
+		border: 8px solid #fff;
+		box-shadow: none;
+		border-radius: 40px;
+		padding-left: 55px;
+		padding-right: 55px;
+
+		&:focus {
+
+		}
+
+		&:hover{
+
+		}
+
+		&:active{
+
+		}
+	}
+
+	&--more {
+		background: none;
+		color: $seafoam;
+		position: relative;
+		z-index: 2;
+		border: 2px solid $seafoam;
+
+		&:hover {
+			background: $seafoam;
+			color: #ffffff;
+		}
+	}
+
+}
+
+
+
+@-webkit-keyframes rotation {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(-359deg);
+	}
+}
+
+
+
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+//play-btn
+.play-btn{
+	font-size: 4px;
+	display: block;
+	position: relative;
+	width: 10em;
+	height: 10em;
+	border: none;
+	cursor: pointer;
+
+	i {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 3;
+		background: url("img/icon/icon-play-arrow.svg") no-repeat;
+	}
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 1;
+		background: url("img/icon/icon-play.svg") no-repeat;
+		opacity: 0.75;
+		transition: opacity 0.3s ease;
+
+		.play-btn:hover &,
+		.play-btn:focus &{
+			outline: none;
+			opacity: 1;
+		}
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 2;
+		background: url("img/icon/icon-play-inner.svg") no-repeat;
+	}
+
+	&--medium{
+		//font-size: 5px;
+		@include res(xs){
+			//font-size: 4px;
+		}
+	}
+
+	&--big{
+		//font-size: 7px;
+		@include res(xs){
+			//font-size: 4px;
+		}
+	}
+}
+
+.video-screen:hover .play-btn:after,
+.video-screen:focus .play-btn:after {
+	outline: none;
+	opacity: 1;
+}
+//play-btn
+
+
+//big-gray-btn
+.big-gray-btn{
+	display: flex;
+	align-items: center;
+	color: $seafoam;
+	font-size: 18px;
+	text-align: center;
+	justify-content: center;
+	padding: 14px 30px;
+	background: $gray-bg;
+	border-radius: 20px;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.3s ease;
+	border: none;
+	text-transform: uppercase;
+
+	@include res(xs){
+		font-size: 16px;
+		padding: 12px 30px;
+	}
+
+	&:hover{
+		background: #d2dbe2;
+	}
+
+	&:focus{
+		outline: none;
+		background: #d2dbe2;
+	}
+
+	img{
+		margin-right: 10px;
+		width: 20px;
+	}
+}
+//big-gray-btn
+
+.center-btn{
+	text-align: center;
+	padding-top: 25px;
+}
+
+

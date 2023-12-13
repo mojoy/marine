@@ -1,0 +1,112 @@
+/*
+Theme Name: marine;
+Author: Alexander Shamarin & Vitaly Kruglov
+Description: marine;
+Version: 1.0
+*/
+
+
+@import 'base/fonts';
+@import 'base/container-page';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/placeholders';
+
+@import 'vendors/swiper';
+
+@import 'base/reset';
+
+@import 'base/typography';
+@import 'base/grid';
+@import 'base/forms';
+@import 'base/buttons';
+@import 'base/modals';
+@import 'base/layout';
+
+@import 'modules/top-panel';
+@import 'modules/mob-panel';
+@import 'modules/main-nav';
+@import 'modules/footer';
+
+@import 'modules/breadcrumbs';
+@import 'modules/pagination';
+
+@import 'modules/box';
+@import 'modules/s-s1';
+@import 'modules/s-s2';
+@import 'modules/s-steps';
+@import 'modules/s-map';
+@import 'modules/s-why-register';
+@import 'modules/s-payment';
+@import 'modules/s-legal-details';
+@import 'modules/s-testimonials';
+@import 'modules/s-data-plans';
+@import 'modules/s-pservice';
+
+@import 'pages/home';
+
+.post-template-default .main,
+.page-template-default .main,
+.error404 .main{
+	color: #1b1c1d;
+	font-size: 26px;
+	padding: 71px 0 128px;
+	line-height: 1.2em;
+
+	@include res(xll){
+		padding-top: 50px;
+		padding-bottom: 100px;
+	}
+
+	@include res(l){
+		padding-bottom: 90px;
+	}
+
+	@include res(m){
+		padding-bottom: 70px;
+		font-size: 20px;
+		line-height: 1.3em;
+	}
+
+	@include res(xs){
+		padding-bottom: 50px;
+	}
+
+	@include res(xxs){
+		padding-bottom: 30px;
+	}
+
+
+
+
+	p {
+		margin-bottom: 31px;
+
+		@include res(m){
+			margin-bottom: 25px;
+		}
+
+		@include res(xxs){
+			margin-bottom: 15px;
+		}
+	}
+
+	.row-btn {
+		padding-top: 23px;
+
+		@include res(m){
+			padding-top: 18px;
+		}
+
+		@include res(xxs){
+			padding-top: 15px;
+		}
+	}
+}
+
+
+
+
+
+
+

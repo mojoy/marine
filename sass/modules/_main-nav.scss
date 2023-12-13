@@ -1,0 +1,124 @@
+
+
+
+
+.main-nav__nav{
+	display: flex;
+	position: relative;
+	z-index: 10;
+	margin: 0 0 0 auto;
+
+	@include res(l){
+		display: none;
+	}
+}
+
+.main-nav__list{
+	display: flex;
+	margin: 0 0 0 auto;
+
+	@include res(s){
+		display: none;
+	}
+
+	&>li{
+		position: relative;
+		padding: 0 7px;
+
+		&:last-child{
+			border-right: none;
+		}
+
+		&>a{
+			display: flex;
+			align-items: center;
+			width: 100%;
+			position: relative;
+			text-align: center;
+			padding: 3px 10px;
+			font-size: 20px;
+			line-height: 1.35;
+			white-space: nowrap;
+			color: #f7f0dc;
+			text-decoration: none;
+			transition: all 0.3s ease;
+
+			@include res(l){
+				padding: 3px 8px;
+				font-size: 19px;
+			}
+
+			&:after {
+				content: "";
+				left: 5%;
+				right: 5%;
+				bottom: 0;
+				position: absolute;
+				border-bottom: 3px solid #f7f0dc;
+				opacity: 0;
+				transition: all 0.3s ease;
+			}
+
+
+
+
+
+			&:hover{
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+
+		&.active a,
+		&.active a:hover{
+			color: #f7f0dc;
+
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+
+//services-menu
+body{
+	.header{
+		position: relative;
+		z-index: 3;
+		width: 100%;
+
+
+		&:after {
+			content: "";
+			background: url("img/home/separator1.png") repeat 50% 50%;
+			height: 14px;
+			position: absolute;
+			left: 0;
+			bottom: -4px;
+			right: 0;
+		}
+
+		@include res(l){
+
+		}
+
+		@include res(m){
+
+		}
+	}
+
+	&:before{
+		content: '';
+
+	}
+
+	&.overlayed{
+		&:before{
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="defe5107-ef71-4caa-8ffd-137d7c11450e" name="marine" url="http://mojoy01.ftp.tools">
+        <fileTransfer rootFolder="/markup.fun/marine/wp-content/themes/marine" accessType="FTPS" host="mojoy01.ftp.tools" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

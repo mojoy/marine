@@ -1,0 +1,233 @@
+%grid {
+	flex-shrink: 1;
+	max-width: 100%;
+}
+
+.hidden {
+	display: none !important;
+}
+
+@for $i from 1 through 12 {
+	.grid-#{$i} {
+		@extend %grid;
+		width: 100% / 12 * $i;
+	}
+	.grid-off-#{$i} {
+		margin-left: 1 / 12 * $i * 100%;
+	}
+}
+
+@each $breakpoint, $value in $breakpoints {
+	@include res($breakpoint) {
+		@for $i from 0 through 12 {
+			.grid-#{$i}_#{$breakpoint} {
+				width: 100% / 12 * $i;
+			}
+			.grid-off-#{$i}_#{$breakpoint} {
+				margin-left: 1 / 12 * $i * 100%;
+			}
+		}
+	}
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: $container_width;
+	position: relative;
+	padding-left: 30px;
+	padding-right: 30px;
+	z-index: 10;
+
+	@include res(l){
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.container-white {
+	background: #fff;
+	position: relative;
+	font-size: 18px;
+	overflow: hidden;
+	color: #26292c;
+
+	@include res(xs){
+		font-size: 17px;
+	}
+
+	.h1 {
+		margin-bottom: 5px;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 610px;
+		height: 610px;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		left: 50%;
+		top: 163px;
+		margin: 27px 0 0 354px;
+		background: #f8f8f8;
+		z-index: 1;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 610px;
+		height: 610px;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		left: 50%;
+		top: 1480px;
+		margin: 27px 0 0 354px;
+		background: #f8f8f8;
+		z-index: 1;
+	}
+
+	&--grey {
+		background: #f4f5f6;
+
+		&:after {
+			background: #eeeff0 url("img/bg/bg-r6.jpg") 50% 50%;
+		}
+
+		&:before {
+			background: #eeeff0 url("img/bg/bg-r6.jpg") 50% 50%;
+		}
+
+		.container-white-inner {
+			&:after {
+				background: #eeeff0 url("img/bg/bg-r6.jpg") 50% 50%;
+			}
+
+			&:before {
+				background: #eeeff0 url("img/bg/bg-r6.jpg") 50% 50%;
+			}
+		}
+	}
+
+	&-inner {
+
+		position: relative;
+		z-index: 2;
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 935px;
+			height: 935px;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+			left: 50%;
+			top: 315px;
+			margin: 27px 0 0 -1079px;
+			background: #f8f8f8;
+			z-index: 1;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 935px;
+			height: 935px;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+			left: 50%;
+			top: 1780px;
+			margin: 27px 0 0 -1079px;
+			background: #f8f8f8;
+			z-index: 1;
+		}
+	}
+
+	.container {
+		padding-top: 65px;
+		padding-bottom: 60px;
+
+		@include res(l){
+			padding-top: 45px;
+			padding-bottom: 45px;
+		}
+
+		@include res(xs){
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+	}
+}
+
+
+
+
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+
+	@include res(xs){
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+
+	[class*="grid"] {
+		padding-left: $gutter;
+		padding-right: $gutter;
+
+		@include res(xs){
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+
+	&--center {
+		align-items: center;
+	}
+	&--middle {
+		justify-content: center;
+	}
+}
+
+.row-ng {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.clearfix {
+	&:before {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+.img-responsive {
+	width: 100%;
+	height: auto;
+}
+
+.s-def{
+	padding: 40px 0;
+}
+
+.s-def-bottom{
+	padding-bottom: 40px;
+}
+
+.s-def-top{
+	padding-top: 40px;
+}
+
+.s-def-small{
+	padding: 15px 0;
+}

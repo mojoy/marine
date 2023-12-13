@@ -1,0 +1,281 @@
+//burger
+.burger{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	top: 14px;
+	right: 10px;
+	z-index: 101;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	cursor: pointer;
+	background: #f7f0dc;
+	border-radius: 3px;
+
+	-webkit-tap-highlight-color: transparent;
+
+	@include res(l){
+
+	}
+
+	@include res(s){
+		display: flex;
+		top: 14px;
+		width: 40px;
+		height: 40px;
+		right: 15px;
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		transition: all 0.3s ease;
+		border-radius: 3px;
+		box-shadow: 0 1px 5px 0 rgba(0,0,0,0.2);
+	}
+
+	figure{
+		position: relative;
+		z-index: 2;
+		width: 15px;
+		height: 2px;
+
+		background: #184c81;
+		transition: transform 0.4s ease,background 0.2s ease 0.1s;
+
+		&:before,&:after{
+			content: '';
+			width: 20px;
+			height: 2px;
+			left: -5px;
+			background: #184c81;
+			position: absolute;
+			transition: transform 0.4s ease;
+		}
+
+		&:before{
+			transform: rotate(0) translate3d(0,-6px,0);
+		}
+
+		&:after{
+			transform: rotate(0) translate3d(0,6px,0);
+		}
+	}
+
+	&.active{
+
+		&:before{
+
+		}
+
+		figure{
+			background: transparent;
+			transform: rotate(180deg);
+			left: -3px;
+			transition: transform 0.4s ease,background 0.1s ease;
+
+			&:before{
+				transform: rotate(-45deg) translate3d(0,0,0) scaleX(1);
+			}
+
+			&:after{
+				transform: rotate(45deg) translate3d(0,0,0) scaleX(1);
+			}
+		}
+	}
+}
+//burger
+
+body.stopped{
+	overflow: hidden;
+}
+
+.link-back-call {
+	@include res(m){
+		span {
+			display: none;
+		}
+	}
+}
+
+.mob-panel{
+	display: none;
+	position: fixed;
+	width: 320px;
+	max-width: 100%;
+	right: 0;
+	top: 0;
+	height: 100%;
+	z-index: 100;
+	color: #FFF;
+	box-shadow: -5px 0 15px 0 rgba(0,0,0,0);
+	transition: all 0.3s ease;
+	transform: translate3d(320px,0,0);
+	pointer-events: none;
+	overflow: auto;
+	background: #0f4378 url("img/home/map/bg.jpg") 50% 50%;
+	-webkit-overflow-scrolling: touch;
+	padding: 20px 0 0 0;
+
+	@include res(l){
+		display: block;
+	}
+
+	&__logo {
+		display: block;
+		overflow: hidden;
+		margin: 0 auto 25px;
+
+		&-img {
+			display: block;
+			max-width: 65%;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+		}
+	}
+
+	&.active{
+		transform: none;
+		pointer-events: all;
+		box-shadow: -5px 0 15px 0 rgba(0,0,0,0.3);
+	}
+
+	.form-search {
+		padding: 20px 28px;
+	}
+
+	&__footer{
+		padding: 0 15px 20px 15px;
+
+		.header-top__socials{
+			margin: 0 -2px 0 20px;
+			display: flex;
+			justify-content: center;
+
+			a{
+				margin: 0 2px;
+
+				&:hover{
+
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+//mobile-nav
+.mobile-nav{
+	user-select: none;
+	margin-bottom: 27px;
+	line-height: 1.7;
+
+	li{
+		display: block;
+		margin: 0 0 10px;
+
+		&>a>.i{
+			font-size: 24px;
+			margin-left: -4px;
+			margin-right: 4px;
+		}
+
+		&.active a,
+		&.active a:hover{
+			color: $green-dark;
+		}
+	}
+
+	&>li{
+
+		&>a{
+			font-size: 26px;
+			text-transform: uppercase;
+			font-weight: 600;
+			padding: 2px 20px;
+			line-height: 1.7;
+			color: #fff;
+			text-decoration: none;
+			text-align: center;
+			display: block;
+		}
+	}
+
+	a{
+		display: flex;
+		align-items: center;
+	}
+
+	.has-sub{
+		position: relative;
+		overflow: hidden;
+
+		&>a{
+			padding-right: 40px;
+		}
+
+		.i-down{
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			width: 28px;
+			height: 28px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: $green;
+			transition: all 0.3s ease;
+			cursor: pointer;
+			border-radius: 50%;
+			font-size: 12px;
+			-webkit-tap-highlight-color: transparent;
+
+			&:after{
+				content: '';
+				position: absolute;
+				display: block;
+				top: -5px;
+				left: -5px;
+				width: 38px;
+				height: 38px;
+			}
+		}
+
+		&>ul{
+			display: none;
+			background: #36b0b7;
+		}
+
+		&.opened{
+			&>.i-down{
+				transform: rotate(180deg);
+			}
+			&>ul,&>.mobile-nav__last-level{
+				display: block;
+			}
+		}
+	}
+
+	&>.has-sub>ul>li>a{
+		padding-left: 40px;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 14px;
+		border-bottom: 1px dotted $green-dark;
+	}
+}
+
+
+//mobile-nav
+
+

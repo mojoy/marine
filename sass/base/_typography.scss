@@ -1,0 +1,262 @@
+body{
+	font-family: $font;
+	font-size: 20px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.3;
+	color: $white;
+	background-color: #ece6d2;
+	background-repeat: repeat;
+	background-position: 50% 50%;
+	background-attachment: fixed;
+
+	@include res(l){
+		font-size: 19px;
+	}
+
+	@include res(m){
+		font-size: 18px;
+	}
+
+	@include res(xs){
+
+	}
+}
+
+h1,.h1,h2,.h2,h3,.h3{
+	font-family: $font;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+h4,.h4,h5,.h5,h6,.h6{
+	font-family: $font;
+	font-weight: normal;
+}
+
+a {
+	color:#ec3940;
+	text-decoration: underline;
+
+	&:hover {
+		color:#c72127;
+		text-decoration: none;
+	}
+}
+
+h1,.h1{
+	font-size: 60px;
+	line-height: 1.1;
+	@include res(xl){
+		font-size: 48px;
+	}
+	@include res(l){
+		font-size: 36px;
+	}
+	@include res(s){
+		font-size: 28px;
+	}
+}
+
+h2,.h2{
+	font-size: 32px;
+	line-height: 1.1;
+	@include res(xl){
+		font-size: 30px;
+	}
+	@include res(l){
+		font-size: 28px;
+	}
+	@include res(s){
+		font-size: 22px;
+	}
+
+}
+
+h3,.h3{
+	font-size: 28px;
+	line-height: 1.2;
+	@include res(l){
+		font-size: 20px;
+	}
+
+}
+
+h4,.h4{
+	font-size: 20px;
+	line-height: 1.3;
+}
+
+h5,.h5{
+	font-size: 18px;
+	line-height: 1.3;
+
+
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+.main {
+
+	ul {
+		padding: 0 0 12px;
+		line-height: 1.0;
+
+		li {
+			margin-bottom: 40px;
+			padding-left: 69px;
+			position: relative;
+			padding-right: 25px;
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: 20px;
+				top: 0;
+				height: 27px;
+				width: 37px;
+				margin: 0;
+				background: url("img/separator-li.svg") no-repeat;
+				transition: all 0.3s ease;
+
+				@include res(m) {
+					left: -1px;
+					background-size: contain;
+					width: 23px;
+					top: 0.15em;
+				}
+
+				@include res(xs) {
+					width: 20px;
+				}
+
+			}
+
+			@include res(m) {
+				padding-left: 30px;
+			}
+		}
+	}
+}
+
+.sec-title{
+	text-align: center;
+	margin-bottom: 25px;
+	max-width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+
+.title {
+	display: flex;
+	padding-bottom: 35px;
+	justify-content: center;
+	color: #184c81;
+	text-transform: uppercase;
+	font-size: 68px;
+	text-align: center;
+	font-weight: 800;
+	font-style: normal;
+
+	@include res(m){
+		font-size: 34px;
+		padding-bottom: 25px;
+	}
+
+	@include res(s){
+		font-size: 32px;
+		padding-bottom: 20px;
+	}
+
+}
+
+
+.single-content {
+
+	h1 {
+		margin-bottom: 30px;
+	}
+
+	h2 {
+		margin-bottom: 25px;
+	}
+
+	h3 {
+		margin-bottom: 20px;
+	}
+
+	&-img {
+		display: flex;
+
+		img {
+			display: block;
+			margin: 0 auto 20px;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.alignright {
+	float: right;
+	margin: 0 30px 20px 0;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 30px 20px 0;
+}
+.video-screen > img {
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+}
+
+.entry {
+	max-width: 840px;
+	margin: 0 auto;
+
+	ol {
+		margin-bottom: 40px;
+		padding-left: 60px;
+		position: relative;
+		padding-right: 25px;
+
+		@include res(m){
+			padding-left: 40px;
+			margin-bottom: 25px;
+		}
+
+		@include res(xxs){
+			padding-left: 30px;
+			margin-bottom: 15px;
+		}
+
+		li {
+			margin-bottom: 20px;
+			padding-left: 10px;
+
+			@include res(m){
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	h3 {
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	h4 {
+		font-size:26px;
+		font-weight: 800;
+		color:#184c81;
+	}
+
+}
+

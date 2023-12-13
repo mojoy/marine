@@ -1,0 +1,75 @@
+.box {
+	height: 100%;
+	border-radius: 30px;
+	background-color: #fdfaf4;
+	box-shadow: 0px 10px 25px 0px rgba(7, 43, 80, 0.4);
+	max-width: 310px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+	color: #1b1c1d;
+
+	@include res(xs) {
+		border-radius: 20px;
+	}
+
+	&--s1 {
+		border-radius: 40px;
+		box-shadow: 0 10px 25px 0 rgba(211, 190, 168, 0.4);
+
+		@include res(xs) {
+			border-radius: 20px;
+		}
+	}
+
+
+	&--s2 {
+		border-radius: 40px;
+		box-shadow: 0 10px 30px 0 rgba(22, 74, 127, 0.2);
+
+		@include res(xs) {
+			border-radius: 20px;
+		}
+	}
+
+
+
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 15px;
+		bottom: 15px;
+		right: 15px;
+		top: 15px;
+		border-width: 2px;
+		border-color: #dfd2be;
+		border-style: solid;
+		border-radius: 20px;
+		pointer-events: none;
+
+		@include res(xs) {
+			border-radius: 15px;
+			left: 10px;
+			bottom: 10px;
+			right: 10px;
+			top: 10px;
+		}
+	}
+
+	&--s1:after {
+		border-radius: 30px;
+
+		@include res(xs) {
+			border-radius: 15px;
+		}
+	}
+
+	&--s2:after {
+		border-radius: 30px;
+
+		@include res(xs) {
+			border-radius: 15px;
+		}
+	}
+}

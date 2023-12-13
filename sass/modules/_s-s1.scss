@@ -1,0 +1,143 @@
+
+
+.s-1 {
+
+	position: relative;
+	z-index: 2;
+	color: #1b1c1d;
+	font-size: 26px;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 1.2;
+
+	@include res(s){
+		font-size: 22px;
+	}
+
+	&__img-mob {
+		display: none;
+
+		@include res(s){
+			display: block;
+			width: 120%;
+			height: auto;
+			max-width: 120%;
+			margin: 0 -5% 0 -15%;
+		}
+	}
+
+	&__logo-for-sailors {
+		position: absolute;
+		left: 50%;
+		margin: 0 0 0 -162px;
+		width: 323px;
+		height: auto;
+		bottom: -53px;
+
+		@include res(l){
+			margin: 0 0 0 -150px;
+			width: 300px;
+			bottom: -50px;
+		}
+
+		@include res(s){
+			margin: 0 0 0 -90px;
+			width: 180px;
+			bottom: -39px;
+		}
+
+
+	}
+
+
+
+
+	&-inner {
+		background-color: #f3e6ce;
+		background-position: 50% 50%;
+		mask-image: url(img/home/s1/mask.png);
+		mask-position: 50% 101%;
+		mask-repeat: repeat-x;
+
+
+		@include res(s){
+			mask-size: 200% auto;
+		}
+
+	}
+
+
+	&-content {
+		background-position: 58% 132%;
+		background-repeat: no-repeat;
+		padding: 140px 0 288px;
+
+		@include res(xl){
+			background-position: 40% 132%;
+		}
+
+		@include res(l){
+			background-position: 36% 132%;
+		}
+
+		@include res(s){
+			padding: 35px 0 0;
+			background-image: none !important;
+		}
+
+
+
+
+	}
+
+	.grid-text {
+		//padding: 149px 0 95px;
+		width: 630px;
+
+		@include res(s){
+			text-align: center;
+
+			.button {
+				margin-bottom: 25px;
+			}
+		}
+	}
+	&-text {
+		padding: 0 0 36px;
+
+		@include res(s){
+			padding: 0 0 20px;
+		}
+	}
+
+	.grid-img {
+		justify-content: flex-end;
+		display: flex;
+	}
+
+
+
+	p {
+		margin: 0;
+	}
+
+	&:after {
+		content: "";
+		width: 100%;
+		display: block;
+
+	}
+	.h2 {
+		color: #184c81;
+		font-size: 68px;
+		text-transform: uppercase;
+		font-weight: 800;
+		font-style: normal;
+		line-height: 0.89em;
+		margin: 0 0 12px;
+
+		@include res(s){
+			font-size: 10.5vw;
+		}
+	}
+}

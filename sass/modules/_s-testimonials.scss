@@ -1,0 +1,212 @@
+.s-testimonials {
+
+
+	&:after {
+		height: 125px;
+		content: "";
+		display: block;
+		background: #14487d url("img/home/map/bg.jpg") 50% 50%;
+		mask: url(img/home/testimonials/mask.png) 50% 100% no-repeat;
+		mask-size: 100% 100%;
+
+		@include res(xll){
+			height: 100px;
+		}
+
+		@include res(l){
+			height: 90px;
+		}
+
+		@include res(m){
+			height: 70px;
+		}
+
+		@include res(xs){
+			height: 50px;
+		}
+
+		@include res(xxs){
+			height: 30px;
+		}
+
+	}
+
+
+
+
+
+
+
+	&-inner {
+		padding: 60px 0 40px;
+		background-position: 50% 50%;
+		background-color: #14487d;
+
+		@include res(m) {
+			padding: 40px 0 30px;
+		}
+
+		@include res(xs) {
+			padding: 30px 0;
+		}
+	}
+
+
+
+	&-content {
+		margin-bottom: 39px;
+	}
+
+	.h1 {
+		font-size: 80px;
+		font-weight: 900;
+		font-style: normal;
+		color: #fdfaf4;
+		line-height: 1.1;
+		max-width: 100%;
+		margin: 0 0 30px;
+		text-align: center;
+
+		@include res(xll) {
+			font-size: 70px;
+		}
+
+		@include res(xll) {
+			font-size: 60px;
+			margin: 0 0 20px;
+		}
+
+		@include res(xs) {
+			font-size: 52px;
+		}
+	}
+}
+.testimonials {
+	color: #1b1c1d;
+	line-height: 1.2;
+
+	.swiper-slide {
+		padding-top: 80px;
+	}
+
+	.swiper-slide-inner {
+		position: relative;
+		margin-bottom: 29px;
+
+		&:before {
+			content: "";
+			width: 130px;
+			height: 130px;
+			position: absolute;
+			top: -65px;
+			left: calc(50% - 65px);
+			z-index: 1;
+			box-shadow: 0px 10px 30px 0px rgba(1, 1, 1, 0.4);
+			border-radius: 50%;
+			background-color: #fdfaf4;
+		}
+	}
+
+	&__item {
+
+		padding: 88px 45px 35px;
+
+		max-width: 100%;
+		align-content: space-between;
+		justify-content: left;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include res(xs) {
+			padding: 70px 30px 20px;
+		}
+
+		&:after {
+
+		}
+
+	}
+
+	&__photo {
+		position: absolute;
+		left: calc(50% - 52px);
+		top: -52px;
+		z-index: 2;
+
+		img {
+			max-width: 100%;
+			width: 100%;
+			display: block;
+			border-radius: 50%;
+			margin: 0 auto;
+		}
+	}
+
+	&__ava {
+		max-width: 100%;
+		width: 100%;
+		display: block;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+
+
+
+	&__text {
+		padding-bottom: 12px;
+		width: 100%;
+	}
+
+	&__name {
+		font-size: 18px;
+		text-align: right;
+		width: 100%;
+		padding: 0 0 4px;
+	}
+
+	.swiper-pagination {
+		position: relative;
+		padding: 3px 0 0;
+		bottom: 0;
+
+		&-bullet {
+			background: #fdfaf4;
+			width: 10px;
+			height: 10px;
+			margin: 0 3px;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			opacity: 1;
+
+
+			&-active {
+				background: none;
+			}
+		}
+
+
+	}
+
+}
+
+.slider-arrow {
+	position: absolute;
+	top: calc(50% + 25px);
+	width: 31px;
+	height: 63px;
+	cursor: pointer;
+
+	.i {
+		display: none;
+	}
+
+	&--prev {
+		left: -37px;
+		background: url("img/home/testimonials/arow-prev.svg") no-repeat;
+	}
+
+	&--next {
+		right: -37px;
+		background: url("img/home/testimonials/arow-next.svg") no-repeat;
+	}
+}
